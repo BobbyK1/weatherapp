@@ -16,8 +16,9 @@ app.get("/results", function(req, res){
     request(url, function(error, response, body){
         if(!error && response.statusCode == 200) {
             let weather = JSON.parse(body);
+            let errormes = `${weather.cod}`;
 
-            if( `${weather.cod}` == "404") {
+            if(errormes === 404) {
                 res.render("no-city");
             } else {
                 let temp = `${weather.main.temp}`;
@@ -32,7 +33,7 @@ app.get("/results", function(req, res){
 });
 
 app.get("*", function(req, res){
-    res.send("404 - Page Not Found");
+    res.render("404");
 });
 
 app.listen(8080, function(){
