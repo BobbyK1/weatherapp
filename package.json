@@ -1,12 +1,12 @@
 {
   "name": "package.json",
   "version": "0.0.1",
-  "description": "",
+  "description": "Small Weather App For Practice",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Bobby K",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.6.1",
